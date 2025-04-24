@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentos Especiais - Cantinho do Aconchego</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Topo com botão de voltar e menu -->
+  <header class="visita-header">
+    <div class="voltar">
+      <a href="index.html">
+        <img src="https://img.freepik.com/fotos-premium/colecao-de-passaros-em-aquarela-bem-delicados-cada-passaro-e-um-tipo-diferente-ia-generativa_742252-8029.jpg" alt="Voltar" class="icon-voltar estrela">
+        Voltar
+      </a>
+    </div>
+    <nav class="visita-nav">
+      <a href="visita.html">Visita</a>
+      <a href="doa.html">Doações</a>
+    </nav>
+  </header>
+
+  <!-- Frase de efeito -->
+  <p class="frase-carinhosa">
+    Registros de momentos que aquecem o coração e celebram a vida!
+  </p>
+
+  <!-- Galeria de imagens -->
+  <section class="momentos-galeria">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPoW9N3jCEiiONlHIoxam6qqarS1vYhWvL_l7zb=s680-w680-h510" alt="Momento 1" class="foto-momento entrar-borda-verde" onclick="abrirImagem(this)">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB8aAx07XJt8vV-zeCOMZZ5leJbsMyzIon-wotzOLpQqyNZAgeBZePe97EIiz7Gg2P-LMtqR-cvfNgA1KlbQ5MUV47_hGsYE3XOEpFqWbinvfjc8Z7A7t9uAuy0OozKd3YCEFJCJ=s680-w680-h510" alt="Momento 2" class="foto-momento entrar-borda-vermelha" onclick="abrirImagem(this)">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB9CRa5sufzEHObTyMWQXuTTPN7IcJAy0QfQ9ek1UJEWSoNyttULA_G7dXdzCMoAriNRwNOMTVlkfxRCIU0LLLfVencwv6ga26tvo-56BdQaFM2LxnEqBWd3eubKW1atVtw24osj=s680-w680-h510" alt="Momento 2" class="foto-momento entrar-borda-vermelha" onclick="abrirImagem(this)">
+    
+    <img src="https://lh3.googleusercontent.com/p/AF1QipMM4CbdEEjVuUaAJ3dfDC5t9gZytJEZCMaNVyJl=s680-w680-h510" alt="Momento 3" class="foto-momento entrar-borda-azul" onclick="abrirImagem(this)">
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="fecharImagem()">
+    <img id="imagem-ampliada" src="" alt="Imagem ampliada">
+    <span class="fechar">✖</span>
+  </div>
+
+  <!-- Botão para abrir o menu de miniaturas -->
+  <button class="botao-miniaturas" onclick="toggleMiniaturas()">Ver mais momentos</button>
+  
+  <!-- Menu de miniaturas escondido por padrão -->
+  <div id="containerMiniaturas" class="esconder">
+    <h2 class="titulo-miniaturas">Mais momentos especiais</h2>
+    <section class="menu-miniaturas">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipMMIGhtODmGOO_Z58RJPm99Nq1s9xwyQvFr53uc=s680-w680-h510" alt="Mini 1" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNr_GMrkCEZOCwtseWjBmG1eS_vLa3FqGuqGMn2=s680-w680-h510" alt="Mini 2" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB9VnWtW9Ejq4U28fxm5XgbyccPN3AHz_GIW0_KSmC7CVx_akfBxa98dk7_YuwL9Zj6BrdAxNz2JsyJIiM0Y1FjXeX8eFiJqJ2BMG-k7Nq2-nIrKfq4TAxV8dXwhdeGj9TI31jU=s680-w680-h510" alt="Mini 3" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPpbOrs7tRjJjMtO0DjqHC33d6VPrPOdcLNeIo_=w141-h235-n-k-no-nu" alt="Mini 4" class="miniatura" onclick="abrirImagem(this)">
+      
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNrLPaBqZAy0eCnBEi0F4qVIW-zm_ZhfzOVohnm=s680-w680-h510" alt="Mini 5" class="miniatura" onclick="abrirImagem(this)">
+      
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPZGbzuJFfcKnR_k4hwtnciUmUqtL9LJj3iZ8BK=s680-w680-h510" alt="Mini 6" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNAO03LC6qLhaqBbFqado72fZzecpI5nRGwjryq=s680-w680-h510" alt="Mini 7" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipOUxr2FWdyRx3ilESpqbckwvhjZdUCIzaYaG7yB=s680-w680-h510" alt="Mini 8" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipN2MGSAm5pEtgiYDexWJyX7HRyg7VvOglaHuXk2=s680-w680-h510" alt="Mini 9" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipOZJMb5RfCIW4IKyhkQ6Nvly7f-ulqlxjwwHlHU=s680-w680-h510" alt="Mini 10" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPLBo-dOGmC9I_1bRBnRJb7Ajk65nR7z8t3iQSy=s680-w680-h510" alt="Mini 11" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipOiAfON5egNuD4jp7HZFtarhaGI6-dt0KDpeqnX=s680-w680-h510" alt="Mini 12" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipMT_BPTMOmbrQqTcAdUmHfUTY8LqX5xO0t9rRKv=s680-w680-h510" alt="Mini 13" class="miniatura" onclick="abrirImagem(this)">
+       <img src="https://lh3.googleusercontent.com/p/AF1QipMFGnCErDZYoBKuW4OX5UGqFKcbPV78MbtZdPtz=s680-w680-h510" alt="Mini 14" class="miniatura" onclick="abrirImagem(this)">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB9ebviIwpe0g4dfntRUjq_GGwoph9SUj0a3nArVUpuBY8TpN85mFlmYrtcHeCkP7pOL75_c6KMiulb9ZLvXaLdKXNktLxl8-FexGzy8P-El2RRySK3nOk6_abx1iNaORLF2EWBv=s680-w680-h510" alt="Mini 15" class="miniatura" 
+       onclick="abrirImagem(this)">
+
+      
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const imagens = document.querySelectorAll('.foto-momento');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('ativo');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    imagens.forEach(img => observer.observe(img));
+
+    function abrirImagem(img) {
+      const lightbox = document.getElementById("lightbox");
+      const imagemAmpliada = document.getElementById("imagem-ampliada");
+      imagemAmpliada.src = img.src;
+      lightbox.style.display = "flex";
+    }
+
+    function fecharImagem() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function toggleMiniaturas() {
+      const container = document.getElementById('containerMiniaturas');
+      container.classList.toggle('esconder');
+    }
+  </script>
+  <footer>
+    <p>&copy; 2025 Cantinho do Aconchego. Todos os direitos reservados CNPJ: 30.849.503/0001-05.</p>
+  </footer>
+</body>
+</html>

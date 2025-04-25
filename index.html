@@ -34,15 +34,17 @@
       <div class="hero-text">
         <h1>Bem-vindo ao Cantinho do Aconchego</h1>
         <p>Em um ambiente acolhedor e tranquilo, o Cantinho do Aconchego oferece cuidado e atenção personalizados para
-          nossos residentes. Nossa equipe dedicada trabalha para garantir que cada momento seja preenchido com conforto,
+          nossos residentes. Nossa equipe se dedica a trabalhar com carinho e atenção para garantir aos residentes todo Conforto, Segurança, Alegria e Satisfação.
+          
+          Nossa equipe dedicada trabalha para garantir que cada momento seja preenchido com conforto,
           segurança e alegria.</p>
 
         <h2>Nossos Serviços:</h2>
         <ul>
-          <li>Alojamentos confortáveis e adaptados às necessidades individuais</li>
-          <li>Alimentação saudável e balanceada, preparada com carinho</li>
+          <li>Ambientes confortáveis com espaços adaptados de acordo com a necessidade individual de cada residente.</li>
+          <li>Alimentação saudável e balanceada, Preparada de acordo com orientação de nutricionista, seguindo alto padrão de higiene, segurança e organização para garantir a qualidade dos alimentos e a saúde aos nossos residentes.</li>
           <li>Atividades recreativas e terapêuticas para estimular a mente e o corpo</li>
-          <li>Assistência médica e de enfermagem 24 horas por dia</li>
+          <li>Assistência médica e de enfermagem 24 horas</li>
           <li>Serviços de higiene e conforto pessoal</li>
         </ul>
 
@@ -75,6 +77,34 @@
     </section>
   </main>
 
+  <div id="cookie-banner" class="cookie-banner">
+    Este site usa cookies para melhorar sua experiência. 
+    <button id="aceitar-cookies">Aceitar</button>
+  </div>
+
+  <script>
+    // Verifica se o cookie já foi aceito
+    if (!localStorage.getItem('cookiesAceitos')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    // Ao clicar em aceitar
+    document.getElementById('aceitar-cookies').onclick = function () {
+      localStorage.setItem('cookiesAceitos', true);
+      document.getElementById('cookie-banner').style.display = 'none';
+    };
+  </script>
+  
+  <a href="https://maps.app.goo.gl/75SsKgEV6kAmihQ48" target="_blank">
+    <div class="avaliacao-google">
+      <img src="https://compraravaliacoes.com.br/wp-content/uploads/2024/04/Comprar-Avaliacoes-do-Google.png" alt="Google" class="google-icon">
+      <span class="nota">4.8</span>
+      <span class="estrelas">★★★★★</span>
+      <p>Baseado no total de avaliações no Google</p>
+    </div>
+  </a>
+
+  
   <footer>
     <p>&copy; 2025 Cantinho do Aconchego. Todos os direitos reservados CNPJ: 30.849.503/0001-05.</p>
   </footer>

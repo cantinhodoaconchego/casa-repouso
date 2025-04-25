@@ -6,6 +6,35 @@
   scroll-behavior: smooth;
 }
 
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2d6a4f;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  z-index: 9999;
+  display: none; /* Começa oculto até verificarmos no JS */
+}
+
+.cookie-banner button {
+  margin-left: 15px;
+  background-color: #40916c;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cookie-banner button:hover {
+  background-color: #52b788;
+}
+
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdfaf6;
@@ -134,7 +163,7 @@ main {
 /* Imagens flutuantes com links */
 .hero-images {
   position: relative;
-  height: 400px;
+  height: 200px;
 }
 
 .hero-images a {
@@ -168,7 +197,7 @@ main {
 }
 
 .hero-images a:nth-child(3) {
-  top: -30px;
+  top: -40px;
   left: 55%;
   animation-delay: 2s;
 }
@@ -224,6 +253,38 @@ footer {
     height: 120px;
     animation: none;
   }
+
+  .avaliacao-google {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+
+  .google-icon {
+    width: 0px !important; /* força o tamanho */
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+  }
+
+  .nota {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d6a4f;
+  }
+
+  .estrelas {
+    color: #fbbc04;
+    font-size: 1.2rem;
+  }
+  
 }
 
 /* VISITAS */
@@ -649,7 +710,7 @@ footer {
 }
 
 .capa-img {
-  width: 500px;
+  width: 468px;
   height: 525px;
   border-radius: 50%;
   object-fit: cover;
@@ -676,72 +737,66 @@ footer {
 
 .informacoes-doacoes {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
 
 .informacoes-doacoes h2 {
   color: #2c3e50;
 }
 
-.nuvens-flutuantes {
-  position: relative;
-  height: 192px;
+.img-pequena {
+  width: 40px;       /* Largura pequena */
+  height: auto;       /* Altura proporcional */
+  border-radius: 8px; /* Cantos arredondados (opcional) */
+  border: 2px solid #ccc; /* Borda leve (opcional) */
+  }
+
+.faixa-verde {
+  background-color: #2d6a4f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  height: 217px;
+  box-sizing: border-box;
+  margin-bottom: 0; /* Remove espaço entre faixas */
 }
 
-.nuvem {
-  width: 210px;
-  height: 290px;
-  position: absolute;
-  animation: flutuar 2s ease-in-out infinite;
-  clip-path: polygon(
-    50% 80%, 61% 70%, 70% 60%, 77% 50%, 82% 40%, 85% 30%,
-    85% 20%, 80% 12%, 70% 8%, 60% 10%, 50% 20%, 40% 10%,
-    30% 8%, 20% 12%, 15% 20%, 15% 30%, 18% 40%, 23% 50%,
-    30% 60%, 39% 70%
-  );
-  background-color: #ffffff;
-  border: 3px solid #d0f0ff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.coluna-esquerda {
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  gap: 10px;
 }
 
-.nuvem img {
-  width: 90%;
-  height: 90%;
+.img-redonda {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 2px solid #eaa4a4;
 }
 
-.nuvem1 { top: 20px; left: 10%; animation-delay: 9s; }
-.nuvem2 { top: 50px; left: 40%; animation-delay: 12s; }
-.nuvem3 { top: 80px; left: 70%; animation-delay: 12s; }
+.coluna-direita {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
-@keyframes flutuar {
-  0%, 100%
+.coluna-direita p {
+  margin: 2px 0;
+}
 
-  @keyframes batida {
-    0%, 100% {
-      transform: scale(5);
-    }
-    25% {
-      transform: scale(1.05);
-    }
-    50% {
-      transform: scale(1.97);
-    }
-    75% {
-      transform: scale(1.03);
-    }
-  }
+.rodape-cnpj {
+  background-color: #fbe2d0; /* Um verde mais escuro para dar continuidade */
+  color: #61491f;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.85rem;
+  margin-top: 0; /* Grudado com a faixa verde */
+}
 
-  .nuvem {
-    animation: flutuar 2s ease-in-out infinite, batida 5.5s ease-in-out infinite;
-  }
 
-  
 /* Responsivo */
 @media (max-width: 600px) {
   .doacoes-header {
@@ -750,7 +805,7 @@ footer {
   }
 
   .doacoes-nav {
-    margin-top: 10px;
+    margin-top: 1px;
   }
 
   .imagem-capa {
